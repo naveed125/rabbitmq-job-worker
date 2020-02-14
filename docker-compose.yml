@@ -10,8 +10,14 @@ services:
 
   worker:
     build: worker
+    volumes:
+      - ./worker:/app
+    environment:
+      - PYTHONUNBUFFERED=1
 
   server:
     build: server
-    posrts:
+    volumes:
+      - ./server:/app
+    ports:
       - 5000:5000
