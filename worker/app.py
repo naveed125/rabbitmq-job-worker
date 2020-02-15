@@ -1,9 +1,9 @@
 import pika
 import time
 
-sleepTime = 10
+sleepTime = 20
 print(' [*] Sleeping for ', sleepTime, ' seconds.')
-time.sleep(30)
+time.sleep(sleepTime)
 
 print(' [*] Connecting to server ...')
 connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
